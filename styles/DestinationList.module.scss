@@ -1,0 +1,30 @@
+.DestinationList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 32px 0;
+	@media screen and (min-width: 1400px) {
+		justify-content: flex-start;
+	}
+}
+.Destination {
+	position: relative;
+	margin: 0 16px;
+	background: none;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		display: block;
+		padding: 1px;
+		width: 100%;
+		background-color: white;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}

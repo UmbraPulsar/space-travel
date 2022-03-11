@@ -1,0 +1,123 @@
+.CrewWrapper {
+	min-height: 100vh;
+	width: 100%;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-image: url('/assets/crew/background-crew-mobile.jpg');
+	@media screen and (min-width: 810px) {
+		background-image: url('/assets/crew/background-crew-tablet.jpg');
+	}
+	@media screen and (min-width: 1400px) {
+		flex-direction: row;
+		padding-top: 40px;
+		background-image: url('/assets/crew/background-crew-desktop.jpg');
+	}
+}
+.ContentWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 24px;
+	color: white;
+	@media screen and (min-width: 810px) {
+		margin-top: 60px;
+		padding: 0 155px;
+	}
+	@media screen and (min-width: 1400px) {
+		flex-direction: row;
+		align-items: flex-end;
+	}
+}
+.CrewPortrait {
+	min-width: 100%;
+	margin-top: 2rem;
+	@media screen and (min-width: 810px) {
+		margin-top: 24px;
+	}
+	@media screen and (min-width: 1400px) {
+		min-width: inherit;
+		max-width: 100%;
+		flex: 1;
+	}
+	border-bottom: 1px solid rgba(white, 0.25);
+	& > img {
+		display: block;
+		margin: auto;
+		max-width: 177.12px;
+		@media screen and (min-width: 810px) {
+			max-width: 456.37px;
+		}
+	}
+	@media screen and (min-width: 810px) {
+		order: 1;
+	}
+}
+
+.CrewTextWrapper {
+	order: 2;
+	margin-bottom: 170px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	@media screen and (min-width: 810px) {
+		max-width: 458px;
+		margin-bottom: 40px;
+		order: 1;
+	}
+	@media screen and (min-width: 1400px) {
+		flex: 1;
+		max-width: 100%;
+		align-items: flex-start;
+		text-align: left;
+	}
+}
+.selectionWrapper {
+	order: 1;
+	@media screen and (min-width: 810px) {
+		order: 2;
+	}
+}
+.selectionList {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 32px 0;
+	@media screen and (min-width: 810px) {
+		margin-bottom: 0;
+	}
+	@media screen and (min-width: 1400px) {
+		margin-top: 120px;
+		margin-bottom: 100px;
+	}
+}
+.selection {
+	padding: 5px;
+	margin: 0 8px;
+	border: none;
+	border-radius: 50%;
+	background-color: rgba(white, 0.25);
+	&:hover {
+		cursor: pointer;
+	}
+	&.active {
+		background-color: white;
+	}
+}
+.CrewText {
+	order: 2;
+	max-width: 327px;
+	& > * {
+		margin-top: 1rem;
+	}
+	@media screen and (min-width: 810px) {
+		max-width: 500px;
+		order: 1;
+	}
+	@media screen and (min-width: 1400px) {
+		max-width: 510px;
+	}
+}

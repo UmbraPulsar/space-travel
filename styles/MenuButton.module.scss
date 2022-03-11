@@ -1,0 +1,15 @@
+.MenuButton {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	border: none;
+	padding: 10px;
+	border-radius: 50%;
+	&:hover {
+		cursor: pointer;
+	}
+	@media screen and (max-width: 810px) {
+		display: flex;
+	}
+}

@@ -1,0 +1,70 @@
+.Heading1 {
+	font-family: 'Bellefair', serif;
+	font-size: 150px;
+}
+.Heading2 {
+	font-family: 'Bellefair', serif;
+	font-size: 56px;
+	@media screen and (min-width: 810px) {
+		font-size: 80px;
+	}
+	@media screen and (min-width: 1400px) {
+		font-size: 100px;
+	}
+}
+.Heading3 {
+	font-family: 'Bellefair', serif;
+	font-size: 24px;
+	@media screen and (min-width: 810px) {
+		font-size: 40px;
+	}
+	@media screen and (min-width: 1400px) {
+		font-size: 56px;
+	}
+}
+.Heading4 {
+	font-family: 'Bellefair', serif;
+	color: rgba(white, 0.5);
+	font-size: 16px;
+	text-transform: uppercase;
+	@media screen and (min-width: 810px) {
+		font-size: 2rem;
+	}
+}
+.Heading5 {
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 28px;
+	letter-spacing: 4.75;
+}
+.Subheading1 {
+	display: block;
+	text-transform: uppercase;
+	font-family: 'Bellefair', serif;
+	font-size: 14px;
+	color: #d0d6f9;
+}
+.Subheading2 {
+	display: block;
+	font-family: 'Bellefair', serif;
+	font-size: 28px;
+	letter-spacing: 2.35px;
+	text-transform: uppercase;
+}
+.Navtext {
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 0.875rem;
+	letter-spacing: 2.7;
+	@media screen and (min-width: 810px) {
+		font-size: 1.2rem;
+	}
+}
+.Paragraph {
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	color: #d0d6f9;
+	@media screen and (min-width: 810px) {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}

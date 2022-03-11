@@ -1,0 +1,20 @@
+.Planet {
+	display: block;
+	max-width: 170px;
+	@media screen and (min-width: 810px) {
+		max-width: 300px;
+	}
+	@media screen and (min-width: 1400px) {
+		max-width: 678px;
+	}
+	@media sreen and(min-width:1080px) {
+		min-width: 100%;
+	}
+}
+.PlanetContainer {
+	@media screen and (min-width: 1440px) {
+		flex: 1;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}

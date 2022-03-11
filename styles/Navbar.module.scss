@@ -1,0 +1,48 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px;
+	@media screen and (min-width: 810px) {
+		padding: 0;
+		padding-left: 40px;
+	}
+	@media screen and (min-width: 1400px) {
+		padding-left: 55px;
+	}
+}
+.navlist {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-transform: uppercase;
+	backdrop-filter: blur(15px);
+	background-color: rgba(white, 0.04);
+	@media screen and (max-width: 810px) {
+		display: none;
+	}
+	@media screen and (min-width: 810px) {
+		padding: 0 40px;
+		width: 450px;
+		height: 96px;
+	}
+	@media screen and (min-width: 1400px) {
+		width: 830px;
+		height: 96px;
+	}
+}
+.linkNumber {
+	display: none;
+	@media screen and (min-width: 1400px) {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+.navlink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 30px;
+	color: white;
+	text-decoration: none;
+}
