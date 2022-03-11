@@ -1,0 +1,49 @@
+.TechWrapper {
+	min-height: 100vh;
+	width: 100%;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-image: url('/assets/technology/background-technology-mobile.jpg');
+	@media screen and (min-width: 810px) {
+		background-image: url('/assets/technology/background-technology-tablet.jpg');
+	}
+	@media screen and (min-width: 1400px) {
+		flex-direction: row;
+		padding-top: 40px;
+		background-image: url('/assets/technology/background-technology-desktop.jpg');
+	}
+}
+.TechImageContainer {
+	margin: 2rem 0;
+	max-height: 170px;
+}
+.TechImage {
+	max-width: 100%;
+}
+
+.TechSelectionListContainer {
+	display: flex;
+	justify-content: center;
+}
+.TechSelectionList {
+	display: flex;
+	list-style: none;
+}
+.TechButton {
+	margin: 0 8px;
+	height: 40px;
+	width: 40px;
+	color: white;
+	border: 0.5px solid rgba(white, 0.25);
+	border-radius: 100%;
+	background: none;
+	&.active {
+		color: black;
+		background-color: white;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
