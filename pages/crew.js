@@ -22,34 +22,31 @@ function crew({ crew }) {
 				<div className={styles.CrewTextWrapper}>
 					<div className={styles.selectionWrapper}>
 						<ul className={styles.selectionList}>
-							<li>
-								<button
-									onClick={() => {
-										setActive(0);
-									}}
-									className={`${styles.selection} ${styles.active}`}></button>
-							</li>
-							<li>
-								<button
-									onClick={() => {
-										setActive(1);
-									}}
-									className={styles.selection}></button>
-							</li>
-							<li>
-								<button
-									onClick={() => {
-										setActive(2);
-									}}
-									className={styles.selection}></button>
-							</li>
-							<li>
-								<button
-									onClick={() => {
-										setActive(3);
-									}}
-									className={styles.selection}></button>
-							</li>
+							{crew.map((item, index) => {
+								if (index == active) {
+									return (
+										<li>
+											<button
+												onClick={() => {
+													setActive(index);
+												}}
+												className={`${styles.selection} ${styles.active}`}></button>
+										</li>
+									);
+								} else {
+									return (
+										<li>
+											<button
+												onClick={() => {
+													setActive(index);
+												}}
+												className={
+													styles.selection
+												}></button>
+										</li>
+									);
+								}
+							})}
 						</ul>
 					</div>
 					<div className={styles.CrewText}>
