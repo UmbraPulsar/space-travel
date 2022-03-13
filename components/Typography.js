@@ -14,6 +14,9 @@ export const Heading3 = ({ text }) => {
 export const Heading4 = ({ text }) => {
 	return <h4 className={styles.Heading4}>{text}</h4>;
 };
+export const Heading42 = ({ text }) => {
+	return <h4 className={styles.Heading42}>{text}</h4>;
+};
 export const Heading5 = ({ text }) => {
 	return <h5 className={styles.Heading5}>{text}</h5>;
 };

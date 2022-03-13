@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import { Heading3, Heading42, Paragraph } from '../components/Typography';
 import AdventureStage from '../components/AdventureStage';
 
 import styles from '../styles/Tech.module.scss';
 
-const TechImage = () => {
+const TechImage = ({ images }) => {
 	return (
 		<div className={styles.TechImageContainer}>
 			<img
 				className={styles.TechImage}
-				src='\assets\technology\image-launch-vehicle-landscape.jpg'
+				srcSet={`${images.portrait} 1400w, ${images.landscape} 1000w`}
+				sizes='(min-width:1000px)'
+				src={images.landscape}
+				alt=''
 			/>
 		</div>
 	);
@@ -23,34 +27,45 @@ export const getStaticProps = () => {
 
 function technology({ techs }) {
 	const [active, setActive] = useState(0);
+
 	return (
 		<div className={styles.TechWrapper}>
 			<Navbar />
 			<AdventureStage number='03' text='Space Launch 101' />
-			<TechImage />
-			<div className={styles.TechSelectionListContainer}>
-				<ul className={styles.TechSelectionList}>
-					{techs.map((item, index) => {
-						if (index == active) {
-							return (
-								<li>
-									<button
-										className={`${styles.TechButton} ${styles.active}`}>
-										{index + 1}
-									</button>
-								</li>
-							);
-						} else {
-							return (
-								<li>
-									<button className={styles.TechButton}>
-										{index + 1}
-									</button>
-								</li>
-							);
-						}
-					})}
-				</ul>
+			<div className={styles.FlexWrapper}>
+				<TechImage images={techs[active].images} />
+				<div className={styles.TechSelectionListContainer}>
+					<ul className={styles.TechSelectionList}>
+						{techs.map((item, index) => {
+							if (index == active) {
+								return (
+									<li key={index}>
+										<button
+											className={`${styles.SelectionButton} ${styles.active}`}>
+											{index + 1}
+										</button>
+									</li>
+								);
+							} else {
+								return (
+									<li key={index}>
+										<button
+											className={`${styles.SelectionButton}`}>
+											{index + 1}
+										</button>
+									</li>
+								);
+							}
+						})}
+					</ul>
+				</div>
+				<div className={styles.TechTextContentContainer}>
+					<div className={styles.TechTextContentTitle}>
+						<Heading42 text='The Terminology...' />
+						<Heading3 text={techs[active].name} />
+					</div>
+					<Paragraph text={techs[active].description} />
+				</div>
 			</div>
 		</div>
 	);

@@ -15,6 +15,7 @@
 .Heading3 {
 	font-family: 'Bellefair', serif;
 	font-size: 24px;
+	text-transform: uppercase;
 	@media screen and (min-width: 810px) {
 		font-size: 40px;
 	}
@@ -28,6 +29,19 @@
 	font-size: 16px;
 	text-transform: uppercase;
 	@media screen and (min-width: 810px) {
+		font-size: 2rem;
+	}
+}
+.Heading42 {
+	font-family: 'Barlow Condensed', sans-serif;
+	color: #d0d6f9;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	@media screen and (min-width: 810px) {
+		font-size: 1rem;
+	}
+	@media screen and (min-width: 1400px) {
 		font-size: 2rem;
 	}
 }
