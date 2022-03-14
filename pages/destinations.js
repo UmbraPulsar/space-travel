@@ -28,14 +28,17 @@ function destinations({ destinations }) {
 
 	return (
 		<div className={styles.DestinationsWrapper}>
-			<Navbar />
+			<Navbar current='destinations' />
 			<AdventureStage number='01' text='Pick your Destination' />
 			<div className={styles.ContentWrapper}>
 				<div className={styles.PlanetWrapper}>
 					<Planet image={destinations[active].images.webp} />
 				</div>
 				<div className={styles.DestinationTextWrapper}>
-					<DestinationList clickHandler={setActive} />
+					<DestinationList
+						clickHandler={setActive}
+						destinations={destinations}
+					/>
 					<Heading2 text={destinations[active].name} />
 					<Paragraph text={destinations[active].description} />
 					<Divider />

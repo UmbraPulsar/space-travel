@@ -13,8 +13,9 @@
 	margin: 0 16px;
 	background: none;
 	border: none;
-	color: white;
+	color: #d0d6f9;
 	text-transform: uppercase;
+	transition: color 250ms ease-in-out;
 	&::after {
 		content: '';
 		position: absolute;
@@ -23,8 +24,20 @@
 		padding: 1px;
 		width: 100%;
 		background-color: white;
+		transform: scale(0);
+		transition: transform 250ms ease-in-out;
 	}
 	&:hover {
 		cursor: pointer;
+		color: white;
+		&::after {
+			transform: scale(0.75);
+		}
+	}
+}
+.active {
+	color: white;
+	&::after {
+		transform: scale(1);
 	}
 }

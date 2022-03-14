@@ -30,7 +30,7 @@ function technology({ techs }) {
 
 	return (
 		<div className={styles.TechWrapper}>
-			<Navbar />
+			<Navbar current='technology' />
 			<AdventureStage number='03' text='Space Launch 101' />
 			<div className={styles.FlexWrapper}>
 				<TechImage images={techs[active].images} />

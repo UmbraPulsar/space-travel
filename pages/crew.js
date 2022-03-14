@@ -16,7 +16,7 @@ function crew({ crew }) {
 
 	return (
 		<div className={styles.CrewWrapper}>
-			<Navbar />
+			<Navbar current='crew' />
 			<AdventureStage number='02' text='meet your crew' />
 			<div className={styles.ContentWrapper}>
 				<div className={styles.CrewTextWrapper}>

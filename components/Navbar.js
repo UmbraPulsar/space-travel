@@ -5,7 +5,7 @@ import styles from '../styles/Navbar.module.scss';
 import { Navtext } from '../components/Typography';
 import MenuButton from './MenuButton';
 
-function Navbar() {
+function Navbar({ current }) {
 	return (
 		<nav className={styles.navbar}>
 			<Image src='/assets/shared/logo.svg' height='48' width='48' />
@@ -29,19 +29,36 @@ function Navbar() {
 						link: '/technology',
 					},
 				].map((item, index) => {
-					return (
-						<li key={index}>
-							<Link href={item.link}>
-								<a className={styles.navlink}>
-									<span
-										className={
-											styles.linkNumber
-										}>{`0${index}`}</span>
-									<Navtext text={item.label} />
-								</a>
-							</Link>
-						</li>
-					);
+					if (item.label == current) {
+						return (
+							<li key={index}>
+								<Link href={item.link}>
+									<a
+										className={`${styles.navlink} ${styles.active}`}>
+										<span
+											className={
+												styles.linkNumber
+											}>{`0${index}`}</span>
+										<Navtext text={item.label} />
+									</a>
+								</Link>
+							</li>
+						);
+					} else {
+						return (
+							<li key={index}>
+								<Link href={item.link}>
+									<a className={styles.navlink}>
+										<span
+											className={
+												styles.linkNumber
+											}>{`0${index}`}</span>
+										<Navtext text={item.label} />
+									</a>
+								</Link>
+							</li>
+						);
+					}
 				})}
 			</ul>
 		</nav>
