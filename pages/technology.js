@@ -34,37 +34,43 @@ function technology({ techs }) {
 			<AdventureStage number='03' text='Space Launch 101' />
 			<div className={styles.FlexWrapper}>
 				<TechImage images={techs[active].images} />
-				<div className={styles.TechSelectionListContainer}>
-					<ul className={styles.TechSelectionList}>
-						{techs.map((item, index) => {
-							if (index == active) {
-								return (
-									<li key={index}>
-										<button
-											className={`${styles.SelectionButton} ${styles.active}`}>
-											{index + 1}
-										</button>
-									</li>
-								);
-							} else {
-								return (
-									<li key={index}>
-										<button
-											className={`${styles.SelectionButton}`}>
-											{index + 1}
-										</button>
-									</li>
-								);
-							}
-						})}
-					</ul>
-				</div>
 				<div className={styles.TechTextContentContainer}>
-					<div className={styles.TechTextContentTitle}>
+					<div className={styles.TechSelectionListContainer}>
+						<ul className={styles.TechSelectionList}>
+							{techs.map((item, index) => {
+								if (index == active) {
+									return (
+										<li key={index}>
+											<button
+												onClick={() => {
+													setActive(index);
+												}}
+												className={`${styles.SelectionButton} ${styles.active}`}>
+												{index + 1}
+											</button>
+										</li>
+									);
+								} else {
+									return (
+										<li key={index}>
+											<button
+												onClick={() => {
+													setActive(index);
+												}}
+												className={`${styles.SelectionButton}`}>
+												{index + 1}
+											</button>
+										</li>
+									);
+								}
+							})}
+						</ul>
+					</div>
+					<div className={styles.TechTextWrapper}>
 						<Heading42 text='The Terminology...' />
 						<Heading3 text={techs[active].name} />
+						<Paragraph text={techs[active].description} />
 					</div>
-					<Paragraph text={techs[active].description} />
 				</div>
 			</div>
 		</div>

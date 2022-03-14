@@ -41,9 +41,6 @@
 	@media screen and (min-width: 810px) {
 		font-size: 1rem;
 	}
-	@media screen and (min-width: 1400px) {
-		font-size: 2rem;
-	}
 }
 .Heading5 {
 	font-family: 'Barlow Condensed', sans-serif;
@@ -80,5 +77,8 @@
 	@media screen and (min-width: 810px) {
 		font-size: 18px;
 		line-height: 28px;
+	}
+	@media screen and (min-width: 1000px) {
+		line-height: 32px;
 	}
 }
