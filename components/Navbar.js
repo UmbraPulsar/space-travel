@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Navbar.module.scss';
@@ -8,7 +8,12 @@ import MenuButton from './MenuButton';
 function Navbar({ current }) {
 	return (
 		<nav className={styles.navbar}>
-			<Image src='/assets/shared/logo.svg' height='48' width='48' />
+			<Image
+				src='/assets/shared/logo.svg'
+				height='48'
+				width='48'
+				alt=''
+			/>
 			<MenuButton />
 			<ul className={styles.navlist}>
 				{[

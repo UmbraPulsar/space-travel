@@ -8,7 +8,7 @@ function DestinationList({ clickHandler, destinations }) {
 		<ul className={styles.DestinationList}>
 			{destinations.map((item, index) => {
 				return (
-					<li>
+					<li key={index}>
 						<button
 							onClick={() => {
 								setActive(index);
