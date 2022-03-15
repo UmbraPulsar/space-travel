@@ -25,7 +25,7 @@ export const getStaticProps = () => {
 	return { props: { techs: technology } };
 };
 
-function technology({ techs }) {
+function Technology({ techs }) {
 	const [active, setActive] = useState(0);
 
 	return (
@@ -77,4 +77,4 @@ function technology({ techs }) {
 	);
 }
 
-export default technology;
+export default Technology;

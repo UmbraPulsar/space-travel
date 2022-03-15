@@ -11,7 +11,7 @@ export const getStaticProps = () => {
 	return { props: { crew: data.crew } };
 };
 
-function crew({ crew }) {
+function Crew({ crew }) {
 	const [active, setActive] = useState(0);
 
 	return (
@@ -63,4 +63,4 @@ function crew({ crew }) {
 	);
 }
 
-export default crew;
+export default Crew;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import AdventureStage from '../components/AdventureStage';
 import Planet from '../components/Planet';
@@ -23,7 +23,7 @@ const Divider = () => {
 	return <div className={styles.Divider}></div>;
 };
 
-function destinations({ destinations }) {
+function Destinations({ destinations }) {
 	const [active, setActive] = useState(0);
 
 	return (
@@ -58,4 +58,4 @@ function destinations({ destinations }) {
 	);
 }
 
-export default destinations;
+export default Destinations;
