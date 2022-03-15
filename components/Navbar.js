@@ -23,15 +23,15 @@ function Navbar({ current }) {
 					},
 					{
 						label: 'destinations',
-						link: '/Destinations',
+						link: '/destinations',
 					},
 					{
 						label: 'crew',
-						link: '/Crew',
+						link: '/crew',
 					},
 					{
 						label: 'technology',
-						link: '/Technology',
+						link: '/technology',
 					},
 				].map((item, index) => {
 					if (item.label == current) {
